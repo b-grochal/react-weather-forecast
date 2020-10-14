@@ -17,18 +17,18 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className='navbar__menu-item'>
-                            <Link to='/' className='navbar-logo'>
-                                Forecast for city
+                            <Link to='/city-forecast' className='navbar-logo'>
+                                City forecast
                             </Link>
                         </li>
                         <li className='navbar__menu-item'>
-                            <Link to='/' className='navbar-logo'>
-                                Forecast for location
+                            <Link to='/location-forecast' className='navbar-logo'>
+                                Location forecast
                             </Link>
                         </li>
                         <li className='navbar__menu-item'>
-                            <Link to='/' className='navbar-logo'>
-                                Forecast for location
+                            <Link to='/about' className='navbar-logo'>
+                                About
                             </Link>
                         </li>
                     </ul>
