@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #1561ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__container {
+    width: 90%;
+}
+
+.navbar__logo {
+
+}
+
+.navbar__menu {
+    
+}
