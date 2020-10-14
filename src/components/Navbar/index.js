@@ -2,11 +2,7 @@ import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
-
-
-
-
+const Navbar = () => {
     return (
         <header>
             <nav className='navbar'>
@@ -22,12 +18,17 @@ const Header = () => {
                         </li>
                         <li className='navbar__menu-item'>
                             <Link to='/' className='navbar-logo'>
-                                Weather Forecast
+                                Forecast for city
                             </Link>
                         </li>
                         <li className='navbar__menu-item'>
                             <Link to='/' className='navbar-logo'>
-                                About
+                                Forecast for location
+                            </Link>
+                        </li>
+                        <li className='navbar__menu-item'>
+                            <Link to='/' className='navbar-logo'>
+                                Forecast for location
                             </Link>
                         </li>
                     </ul>
@@ -39,4 +40,4 @@ const Header = () => {
     )
 };
 
-export default Header;
+export default Navbar;
