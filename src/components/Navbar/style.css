@@ -54,3 +54,55 @@
 .navbar__hamburger-menu-icon {
     display: none;
 }
+
+@media screen and (max-width: 960px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .navbar__menu.hamburger-menu {
+        background: #3091c9;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .navbar__menu-item-link {
+        display: block;
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .navbar__menu-item-link:hover {
+        background-color: #FC5226;
+    }
+
+    .navbar__hamburger-menu-icon {
+        display: block;
+    }
+
+    .fa-bars {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+}
