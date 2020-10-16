@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../../pages/HomePage';
-import ForecastForCityPage from '../../pages/ForecastForCityPage';
-import ForecastForLocationPage from '../../pages/ForecastForLocationPage';
+import ForecastForCityPage from '../../pages/CityForecastPage';
+import ForecastForLocationPage from '../../pages/LocationForecastPage';
 import AboutPage from '../../pages/AboutPage';
 
 const Main = () => {
@@ -11,9 +11,9 @@ const Main = () => {
         <main>
             <Switch>
                 <Route path='/' exact component={HomePage} />
-                <Route path='/' component={ForecastForCityPage} />
-                <Route path='/'  component={ForecastForLocationPage}/>
-                <Route path='/'  component={AboutPage}/>
+                <Route path='/city-forecast' component={ForecastForCityPage} />
+                <Route path='/location-forecast'  component={ForecastForLocationPage}/>
+                <Route path='/about'  component={AboutPage}/>
             </Switch>
         </main>
     )
