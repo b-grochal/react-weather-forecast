@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 2px solid #3091c9;
+    border-radius: 4px;
+    padding: 10px 10px;
 }
 
 .form__inputs-container {
@@ -13,8 +16,17 @@
 
 .form__input-group {
     display: flex;
+    flex-direction: column;
+}
+
+.form__input-container {
+    display: flex;
     flex-direction: row;
     gap: 5px;
+}
+
+.form__input-validation-text {
+    color: red;
 }
 
 .form__buttons-container {
