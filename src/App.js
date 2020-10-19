@@ -2,9 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router} from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Navbar from './layout/Navbar';
+import Main from './layout/Main';
+import Footer from './layout/Footer';
 
 function App() {
   return (
