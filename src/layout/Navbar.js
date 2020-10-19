@@ -10,33 +10,33 @@ const Navbar = () => {
     const closeHamburgerMenu = () => setHamburgerMenuVisibility(false);
 
     return (
-        <header>
-            <nav className='navbar'>
-                <div className='navbar__container'>
-                    <Link to='/' className='navbar__logo' onClick={closeHamburgerMenu}>
+        <header className='header'>
+            <nav className='header__navbar'>
+                <div className='header__navbar-container'>
+                    <Link to='/' className='header__navbar-logo' onClick={closeHamburgerMenu}>
                         Weather Forecast
                     </Link>
-                    <div className='navbar__hamburger-menu-icon' onClick={handleHamburgerMenuIconClick}>
+                    <div className='header__navbar-hamburger-menu-icon' onClick={handleHamburgerMenuIconClick}>
                         <i className={hamburgerMenuVisibility ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
-                    <ul className={hamburgerMenuVisibility ? 'navbar__menu hamburger-menu' : 'navbar__menu'}>
-                        <li className='navbar__menu-item'>
-                            <Link to='/' className='navbar__menu-item-link' onClick={closeHamburgerMenu}>
+                    <ul className={hamburgerMenuVisibility ? 'header__navbar-menu hamburger-menu' : 'header__navbar-menu'}>
+                        <li className='header__navbar-menu-item'>
+                            <Link to='/' className='header__navbar-menu-item-link' onClick={closeHamburgerMenu}>
                                 Home
                             </Link>
                         </li>
-                        <li className='navbar__menu-item'>
-                            <Link to='/city-forecast' className='navbar__menu-item-link' onClick={closeHamburgerMenu}>
+                        <li className='header__navbar-menu-item'>
+                            <Link to='/city-forecast' className='header__navbar-menu-item-link' onClick={closeHamburgerMenu}>
                                 City forecast
                             </Link>
                         </li>
-                        <li className='navbar__menu-item'>
-                            <Link to='/location-forecast' className='navbar__menu-item-link' onClick={closeHamburgerMenu}>
+                        <li className='header__navbar-menu-item'>
+                            <Link to='/location-forecast' className='header__navbar-menu-item-link' onClick={closeHamburgerMenu}>
                                 Location forecast
                             </Link>
                         </li>
-                        <li className='navbar__menu-item'>
-                            <Link to='/about' className='navbar__menu-item-link' onClick={closeHamburgerMenu}>
+                        <li className='header__navbar-menu-item'>
+                            <Link to='/about' className='header__navbar-menu-item-link' onClick={closeHamburgerMenu}>
                                 About
                             </Link>
                         </li>

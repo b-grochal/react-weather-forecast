@@ -1,4 +1,8 @@
-.navbar {
+.header {
+    width: 100%;
+}
+
+.header__navbar {
     background-color: #1C77AC;
     height: 80px;
     display: flex;
@@ -8,7 +12,7 @@
     width: 100%;
 }
 
-.navbar__container {
+.header__navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,14 +20,14 @@
     width: 95%;
 }
 
-.navbar__logo {
+.header__navbar-logo {
     color: #ffffff;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
 }
 
-.navbar__menu {
+.header__navbar-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
     column-gap: 10px;
@@ -33,11 +37,11 @@
     width: 70%;
 }
 
-.navbar__menu-item {
+.header__navbar-menu-item {
     height: 80px;
 }
 
-.navbar__menu-item-link {
+.header__navbar-menu-item-link {
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -46,22 +50,22 @@
     height: 100%;
 }
 
-.navbar__menu-item-link:hover {
+.header__navbar-menu-item-link:hover {
     background-color: #FC5226;
     transition: all 0.2s ease;
 }
 
-.navbar__hamburger-menu-icon {
+.header__navbar-hamburger-menu-icon {
     display: none;
 }
 
 @media screen and (max-width: 960px) {
 
-    .navbar {
+    .header__navbar {
         position: relative;
     }
 
-    .navbar__menu {
+    .header__navbar-menu {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -72,7 +76,7 @@
         transition: all 0.5s ease;
     }
 
-    .navbar__menu.hamburger-menu {
+    .header__navbar-menu.hamburger-menu {
         background: #3091c9;
         left: 0;
         opacity: 1;
@@ -80,18 +84,18 @@
         z-index: 1;
     }
 
-    .navbar__menu-item-link {
+    .header__navbar-menu-item-link {
         display: block;
         text-align: center;
         padding: 2rem;
         width: 100%;
     }
 
-    .navbar__menu-item-link:hover {
+    .header__navbar-menu-item-link:hover {
         background-color: #FC5226;
     }
 
-    .navbar__hamburger-menu-icon {
+    .header__navbar-hamburger-menu-icon {
         display: block;
     }
 
