@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from '../../pages/HomePage';
-import ForecastForCityPage from '../../pages/CityForecastPage';
-import ForecastForLocationPage from '../../pages/LocationForecastPage';
-import AboutPage from '../../pages/AboutPage';
+import HomePage from '../pages/HomePage';
+import ForecastForCityPage from '../pages/CityForecastPage';
+import ForecastForLocationPage from '../pages/LocationForecastPage';
+import AboutPage from '../pages/AboutPage';
 
 const Main = () => {
 
