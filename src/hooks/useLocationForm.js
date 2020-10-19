@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import validateLocationFormValues from '../helpers/validateLocationFormValues';
+import valdateLocationFormValues from '../helpers/validateLocationFormValues';
 
 const useLocationForm = (submitForm, validateForm) => {
     const [values, setValues] = useState({
@@ -18,7 +20,7 @@ const useLocationForm = (submitForm, validateForm) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        setErrors({});
+        setErrors(validateLocationFormValues(values));
         setIsSubmitting(true);
     }
 
