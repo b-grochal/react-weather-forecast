@@ -4,11 +4,12 @@ import HomePage from '../pages/HomePage';
 import CityForecastPage from '../pages/CityForecastPage';
 import LocationForecastPage from '../pages/LocationForecastPage';
 import AboutPage from '../pages/AboutPage';
+import './Main.css';
 
 const Main = () => {
 
     return (
-        <main>
+        <main className='main'>
             <Switch>
                 <Route path='/' exact component={HomePage} />
                 <Route path='/city-forecast' component={CityForecastPage} />
