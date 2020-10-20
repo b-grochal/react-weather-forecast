@@ -4,16 +4,20 @@ import './WeatherForecastList.css';
 import { WeatherForecastContext } from '../context/WeatherForecastContext';
 
 const WeatherForecastList = () => {
-    const { loading, weatherForecastList } = useContext(WeatherForecastContext);
+    const { error, isLoading, weatherForecastList } = useContext(WeatherForecastContext);
 
     return (
         <div>
 
-            { loading && <h1>Loading data</h1>}
+            { isLoading && <h1>Loading data</h1>}
+
+            {!isLoading && error ? (
+                <h2>Oh no. Something went wrong.</h2>
+            ) : null}
 
             { weatherForecastList ?
-                weatherForecastList.map(weatherForecastListItem => 
-                    ( <WeatherForecastListItem weatherForecastListItem={weatherForecastListItem} />)
+                weatherForecastList.map(weatherForecastListItem =>
+                    (<WeatherForecastListItem weatherForecastListItem={weatherForecastListItem} />)
                 ) : null
             }
         </div>

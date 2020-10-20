@@ -5,26 +5,29 @@ export const WeatherForecastContext = React.createContext();
 
 export const WeatherForecastProvider = ({children}) => {
     const [weatherForecastList, setWeatherForecastList] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(false);
 
     const getWeatherForecastForLocation = async (apiKey, latitude, longitude) => {
         try{
-            setLoading(true);
+            setIsLoading(true);
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`);
             setWeatherForecastList(response.data.list);
             debugger;
-            setLoading(false);
+            setIsLoading(false);
             console.log(response);
         } catch (e) {
             console.log(e);
-            setLoading(false);
+            setError(true);
+            setIsLoading(false);
         }
         
     }
 
     return (
         <WeatherForecastContext.Provider value={{
-            loading,
+            error,
+            isLoading,
             weatherForecastList,
             getWeatherForecastForLocation
         }}>
