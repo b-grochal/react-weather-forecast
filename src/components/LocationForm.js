@@ -28,6 +28,7 @@ const LocationForm = () => {
                             type='number'
                             name='latitude'
                             placeholder='50'
+                            step='0.01'
                             value={values.latitude}
                             onChange={handleChange}
                         />
@@ -42,6 +43,7 @@ const LocationForm = () => {
                             type='number'
                             name='longitude'
                             placeholder='50'
+                            step='0.01'
                             value={values.longitude}
                             onChange={handleChange}
                         />
