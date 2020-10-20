@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { LocationWeatherForecastContext } from '../context/locationWeatherForecastContext';
+import { WeatherForecastContext } from '../context/WeatherForecastContext';
 import validateLocationFormValues from '../helpers/validateLocationFormValues';
 import useLocationForm from '../hooks/useLocationForm';
 import './LocationForm.css';
 
 const LocationForm = () => {
-    const submitForm = () => {
+    const submitForm = async () => {
         console.log('Form submitted sucessfully.');
-        getWeatherForecastForLocation('62f76619fd030ab523e8efd5f818b37c', values.latitude, values.longitude);
+        await getWeatherForecastForLocation('62f76619fd030ab523e8efd5f818b37c', values.latitude, values.longitude);
     }
 
     const { handleChange, handleSubmit, values, errors } = useLocationForm(
@@ -15,7 +15,7 @@ const LocationForm = () => {
         validateLocationFormValues
     );
 
-    const { getWeatherForecastForLocation } = useContext(LocationWeatherForecastContext);
+    const { getWeatherForecastForLocation } = useContext(WeatherForecastContext);
 
     return (
         <form onSubmit={handleSubmit} className='form'>
