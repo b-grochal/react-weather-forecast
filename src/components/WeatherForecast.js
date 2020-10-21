@@ -16,7 +16,7 @@ const WeatherForecast = () => {
 
             { weatherForecastList && !isLoading ?
                 weatherForecastList.map(weatherForecastListItem =>
-                    (<WeatherForecastItem weatherForecastListItem={weatherForecastListItem} />)
+                    (<WeatherForecastItem key={weatherForecastListItem.dt_txt} weatherForecastListItem={weatherForecastListItem} />)
                 ) : null
             }
         </div>
