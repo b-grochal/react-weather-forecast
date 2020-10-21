@@ -14,7 +14,7 @@ const WeatherForecast = () => {
                 <p className='weather-forecast-container__communicate-text'>Lodaing data</p>
             ) : null}
 
-            { weatherForecastList ?
+            { weatherForecastList && !isLoading ?
                 weatherForecastList.map(weatherForecastListItem =>
                     (<WeatherForecastItem weatherForecastListItem={weatherForecastListItem} />)
                 ) : null
