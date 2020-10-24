@@ -23,12 +23,28 @@ export const WeatherForecastProvider = ({children}) => {
         
     }
 
+    const getWeatherForecastForCity = async (apiKey, cityName) => {
+        try{
+            setIsLoading(true);
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${apiKey}`);
+            setWeatherForecastList(response.data.list);
+            setIsLoading(false);
+            console.log(response);
+        } catch (e) {
+            console.log(e);
+            setError(true);
+            setIsLoading(false);
+        }
+        
+    }
+
     return (
         <WeatherForecastContext.Provider value={{
             error,
             isLoading,
             weatherForecastList,
-            getWeatherForecastForLocation
+            getWeatherForecastForLocation,
+            getWeatherForecastForCity
         }}>
             {children}
         </WeatherForecastContext.Provider>
