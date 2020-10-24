@@ -1,0 +1,8 @@
+.weather-forecast-container {
+    padding: 10px 0;
+}
+
+.weather-forecast-container__communicate-text {
+    font-size: 1rem;
+    text-align: center;
+}

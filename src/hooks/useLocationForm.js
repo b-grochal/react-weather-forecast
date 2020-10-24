@@ -4,8 +4,8 @@ import valdateLocationFormValues from '../helpers/validateLocationFormValues';
 
 const useLocationForm = (submitForm, validateForm) => {
     const [values, setValues] = useState({
-        latitude: undefined,
-        longitude: undefined
+        latitude: '',
+        longitude: ''
     });
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);

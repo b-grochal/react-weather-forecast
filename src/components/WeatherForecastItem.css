@@ -1,0 +1,43 @@
+.weather-forecast-item {
+    padding: 5px 5px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5px 0;
+}
+
+.weather-forecast-item__info {
+    font-size: 1rem;
+}
+
+.weather-forecast-item__info--date {
+    justify-self: start;
+}
+
+.weather-forecast-item__info--weather-description {
+    justify-self: center;
+}
+
+.weather-forecast-item__info--temperature {
+    justify-self: center;
+}
+
+.weather-forecast-item__info--pressure {
+    justify-self: end;
+}
+
+@media screen and (max-width: 792px) {
+    .weather-forecast-item {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);;
+    }
+
+    .weather-forecast-item__info--date {
+        justify-self: center;
+    }
+
+    .weather-forecast-item__info--pressure {
+        justify-self: center;
+    }
+}
