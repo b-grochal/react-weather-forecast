@@ -26,3 +26,18 @@
 .weather-forecast-item__info--pressure {
     justify-self: end;
 }
+
+@media screen and (max-width: 792px) {
+    .weather-forecast-item {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);;
+    }
+
+    .weather-forecast-item__info--date {
+        justify-self: center;
+    }
+
+    .weather-forecast-item__info--pressure {
+        justify-self: center;
+    }
+}
