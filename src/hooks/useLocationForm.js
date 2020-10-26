@@ -22,6 +22,14 @@ const useLocationForm = (submitForm, validateForm) => {
         setIsSubmitting(true);
     }
 
+    const handleLocationFromGeolocationApi = (position) => {
+        debugger;
+        setValues({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+        })
+    }
+
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
             submitForm();
@@ -30,7 +38,7 @@ const useLocationForm = (submitForm, validateForm) => {
         [errors]
     );
 
-    return { handleChange, handleSubmit, values, errors};
+    return { handleChange, handleSubmit, handleLocationFromGeolocationApi, values, errors};
 };
 
 export default useLocationForm;
