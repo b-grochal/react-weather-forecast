@@ -1,5 +1,5 @@
 const isCityNameValid = (cityName) => {
-    const regexPattern = /[a-z]+/i;
+    const regexPattern = /^[a-z][a-z]+$/i;
     return regexPattern.test(cityName);
 }
 
