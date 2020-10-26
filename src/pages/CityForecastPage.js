@@ -1,8 +1,14 @@
 import React from 'react';
+import CityForm from '../components/CityForm';
+import WeatherForecast from '../components/WeatherForecast';
+import { WeatherForecastProvider } from '../context/WeatherForecastContext';
 
 const ForecastForCityPage = () => {
     return (
-        <h1>Forecast for city page</h1>
+        <WeatherForecastProvider>
+            <CityForm />
+            <WeatherForecast />
+        </WeatherForecastProvider>
     )
 };
 

@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 
-const useLocationForm = (submitForm, validateForm) => {
+const useCityForm = (submitForm, validateForm) => {
     const [values, setValues] = useState({
-        latitude: '',
-        longitude: ''
+        cityName: ''
     });
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,6 +30,6 @@ const useLocationForm = (submitForm, validateForm) => {
     );
 
     return { handleChange, handleSubmit, values, errors};
-};
+}
 
-export default useLocationForm;
+export default useCityForm;
