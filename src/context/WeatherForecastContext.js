@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { getLocationWeatherForecastFromWebApi, getCityWeatherForecastFromWebApi } from '../api/openWeatherMapApi';
 
 export const WeatherForecastContext = React.createContext();
 
@@ -8,14 +9,13 @@ export const WeatherForecastProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(false);
 
-    const getWeatherForecastForLocation = async (apiKey, latitude, longitude) => {
+    const getWeatherForecastForLocation = async (latitude, longitude) => {
         try {
             setError(false);
             setIsLoading(true);
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`);
-            setWeatherForecastList(response.data.list);
+            const forecast = await getLocationWeatherForecastFromWebApi(latitude, longitude);
+            setWeatherForecastList(forecast);
             setIsLoading(false);
-            console.log(response);
         } catch (e) {
             console.log(e);
             setWeatherForecastList([]);
@@ -25,15 +25,14 @@ export const WeatherForecastProvider = ({children}) => {
         
     }
 
-    const getWeatherForecastForCity = async (apiKey, cityName) => {
+    const getWeatherForecastForCity = async (cityName) => {
         try { 
             debugger;
             setError(false);
             setIsLoading(true);
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${apiKey}`);
-            setWeatherForecastList(response.data.list);
+            const forecast = await getCityWeatherForecastFromWebApi(cityName);
+            setWeatherForecastList(forecast);
             setIsLoading(false);
-            console.log(response);
         } catch (e) {
             console.log(e);
             setWeatherForecastList([]);

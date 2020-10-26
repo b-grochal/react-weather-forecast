@@ -8,7 +8,7 @@ const LocationForm = () => {
     const submitForm = async () => {
         debugger;
         console.log('Form submitted sucessfully.');
-        await getWeatherForecastForLocation(process.env.REACT_APP_OPEN_WEATHER_MAP_API_KEY, values.latitude, values.longitude);
+        await getWeatherForecastForLocation(values.latitude, values.longitude);
     }
 
     const { handleChange, handleSubmit, values, errors } = useLocationForm(

@@ -7,7 +7,7 @@ import './CityForm.css';
 
 const CityForm = () => {
     const submitForm = async () => {
-        await getWeatherForecastForCity(process.env.REACT_APP_OPEN_WEATHER_MAP_API_KEY, values.cityName);
+        await getWeatherForecastForCity(values.cityName);
     }
 
     const { handleChange, handleSubmit, values, errors } = useCityForm(
