@@ -12,7 +12,7 @@ const WeatherForecast = () => {
             { isLoading && <LoadingSpinner />}
 
             {!isLoading && error ? (
-                <p className='weather-forecast-container__communicate-text'>Lodaing data</p>
+                <p className='weather-forecast-container__communicate-text'>Oopps. Something went wrong. Check if your city name is correct.</p>
             ) : null}
 
             { weatherForecastList && !isLoading ?

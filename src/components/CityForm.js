@@ -22,7 +22,7 @@ const CityForm = () => {
             <div className='form__inputs-container'>
                 <div className='form__input-group'>
                     <div className='form__input-container'>
-                        <label className='form__label'>Latitude</label>
+                        <label className='form__label'>City name</label>
                         <input
                             className='form__input'
                             type='text'
@@ -36,9 +36,6 @@ const CityForm = () => {
                 </div>
             </div>
             <div className='form__buttons-container'>
-                <button className='form__button'>
-                    Get location
-                </button>
                 <button className='form__button' type='submit'>
                     Get forecast
                 </button>
