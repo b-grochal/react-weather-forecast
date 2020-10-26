@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { WeatherForecastContext } from '../context/WeatherForecastContext';
 import validateLocationFormValues from '../helpers/validateLocationFormValues';
 import useLocationForm from '../hooks/useLocationForm';
+import { getLocation } from '../helpers/geolocation';
 import './LocationForm.css';
 
 const LocationForm = () => {
@@ -11,7 +12,11 @@ const LocationForm = () => {
         await getWeatherForecastForLocation(values.latitude, values.longitude);
     }
 
-    const { handleChange, handleSubmit, values, errors } = useLocationForm(
+    const getCurrentLocation = () => {
+        getLocation(handleLocationFromGeolocationApi);
+    }
+
+    const { handleChange, handleSubmit, handleLocationFromGeolocationApi, values, errors } = useLocationForm(
         submitForm,
         validateLocationFormValues
     );
@@ -53,7 +58,7 @@ const LocationForm = () => {
                 </div>
             </div>
             <div className='form__buttons-container'>
-                <button className='form__button'>
+                <button className='form__button' type='button' onClick={getCurrentLocation}>
                     Get location
                 </button>
                 <button className='form__button' type='submit'>
