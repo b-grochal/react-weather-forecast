@@ -6,8 +6,9 @@ import './LocationForm.css';
 
 const LocationForm = () => {
     const submitForm = async () => {
+        debugger;
         console.log('Form submitted sucessfully.');
-        await getWeatherForecastForLocation('62f76619fd030ab523e8efd5f818b37c', values.latitude, values.longitude);
+        await getWeatherForecastForLocation(values.latitude, values.longitude);
     }
 
     const { handleChange, handleSubmit, values, errors } = useLocationForm(
