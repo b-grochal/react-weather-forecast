@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Accordion.css';
 
 const Accordion = ({ title, content }) => {
@@ -17,10 +17,10 @@ const Accordion = ({ title, content }) => {
         <div className='accordion'>
             <button className='accordion__header' onClick={toggleActive}>
                 <p className='accordion__header-title'>{title}</p>
-                <i className={active ? 'fas fa-plus accordion__header-icon' : 'fas fa-minus accordion__header-icon'} />
+                <i className={active ? 'fas fa-minus accordion__header-icon' : 'fas fa-plus accordion__header-icon'} />
             </button>
             <div className='accordion__content' ref={contentRef}>
-                {content}
+                <span className='accordion__content-text'>{content}</span>
             </div>
         </div>
     )

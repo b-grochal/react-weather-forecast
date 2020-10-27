@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    background-color: #1C77AC;
+    background-color: #3091c9;
     border: none;
     outline: none;
     transition: all 0.4s linear;
@@ -30,7 +30,11 @@
 }
 
 .accordion__content {
-    padding: 20px 10px;
     transition: max-height 0.4s linear;
+    overflow: hidden;
+}
+
+.accordion__content-text {
+    padding: 20px 10px;
     font-size: 1rem;
 }
