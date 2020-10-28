@@ -7,10 +7,8 @@ import './LocationForm.css';
 
 const LocationForm = () => {
     const submitForm = async () => {
-        debugger;
-        console.log('Form submitted sucessfully.');
         await getWeatherForecastForLocation(values.latitude, values.longitude);
-    }
+    };
 
     const getCurrentLocation = () => {
         getLocation(handleLocationFromGeolocationApi);
