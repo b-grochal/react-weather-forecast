@@ -36,5 +36,7 @@
 
 .accordion__content-text {
     padding: 20px 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+    word-break: break-word;
 }

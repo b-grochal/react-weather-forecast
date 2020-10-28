@@ -20,7 +20,7 @@ const Accordion = ({ title, content }) => {
                 <i className={active ? 'fas fa-minus accordion__header-icon' : 'fas fa-plus accordion__header-icon'} />
             </button>
             <div className='accordion__content' ref={contentRef}>
-                <span className='accordion__content-text'>{content}</span>
+                <p className='accordion__content-text'>{content}</p>
             </div>
         </div>
     )
