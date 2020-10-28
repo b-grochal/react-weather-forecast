@@ -7,7 +7,7 @@ const AboutPage = () => {
         <div className='about-page-container'>
             <Accordion
                 title="What is Weather Forecast?"
-                content="Weather Forecast is a web application created with React.js for learning purposes which lets you check 5-days weather forecast for thousands of 
+                content="Weather Forecast is a web application created with React.js for learning purposes which lets you check 5-day weather forecast for thousands of 
                 cities around the world and any location."
             />
             <Accordion
@@ -18,7 +18,7 @@ const AboutPage = () => {
             />
             <Accordion 
                 title="From where is weather forecast data fetched?"
-                content="Wheater forecast data is fetched from OpenWeatherMap API. It lets you check 5-days weather forecast for city or location for free."
+                content="Wheater forecast data is fetched from OpenWeatherMap API. It lets you check 5-day weather forecast for city or location for free."
             />
             <Accordion 
                 title="I cannot get my current location. What's wrong?" 
