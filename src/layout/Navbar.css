@@ -83,8 +83,7 @@
     }
 
     .header__navbar-menu-item-link {
-        display: block;
-        text-align: center;
+        justify-content: center;
         padding: 2rem;
         width: 100%;
     }
