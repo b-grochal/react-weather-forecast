@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import WeatherForecastItem from './WeatherForecastItem';
 import './WeatherForecast.css';
 import { WeatherForecastContext } from '../context/WeatherForecastContext';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from '../layout/LoadingSpinner';
 
 const WeatherForecast = () => {
     const { error, isLoading, weatherForecastList } = useContext(WeatherForecastContext);

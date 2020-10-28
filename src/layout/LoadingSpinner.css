@@ -6,7 +6,7 @@
 
 .loading-spinner-container__loading-spinner {
     border: 16px solid #C0C0C0;
-    border-top: 16px solid #1C77AC; /* Blue */
+    border-top: 16px solid #1C77AC;
     border-radius: 50%;
     width: 120px;
     height: 120px;
