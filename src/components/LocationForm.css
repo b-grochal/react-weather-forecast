@@ -61,7 +61,23 @@
 .form__button:hover {
     cursor: pointer;
     background-color: #FC5226;
-} 
+}
+
+.form__button:focus {
+    outline-color: #FC5226;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 @media screen and (max-width: 1110px) {
     .form {
