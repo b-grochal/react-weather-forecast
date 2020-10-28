@@ -61,7 +61,11 @@
 .form__button:hover {
     cursor: pointer;
     background-color: #FC5226;
-} 
+}
+
+.form__button:focus {
+    outline-color: #FC5226;
+}
 
 @media screen and (max-width: 1110px) {
     .form {

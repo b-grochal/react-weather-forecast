@@ -8,7 +8,7 @@ import './CityForm.css';
 const CityForm = () => {
     const submitForm = async () => {
         await getWeatherForecastForCity(values.cityName);
-    }
+    };
 
     const { handleChange, handleSubmit, values, errors } = useCityForm(
         submitForm,
