@@ -20,5 +20,8 @@ const handleGeolocationApiError = (error) => {
         case error.UNKNOWN_ERROR:
           alert("An unknown error occurred.");
           break;
+        default:
+          alert("An error occurred.");
+          break;
       }
 }
