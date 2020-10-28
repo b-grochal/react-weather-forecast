@@ -23,7 +23,6 @@ const useLocationForm = (submitForm, validateForm) => {
     }
 
     const handleLocationFromGeolocationApi = (position) => {
-        debugger;
         setValues({
             latitude: position.coords.latitude,
             longitude: position.coords.longitude

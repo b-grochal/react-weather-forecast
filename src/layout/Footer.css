@@ -3,7 +3,13 @@
     color: #FFFFFF;
     padding: 10px 0;
     font-size: 1rem;
-    text-align: center;
     flex-shrink: 0;
-    width: 100%
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__text {
+    width: 90%;
+    text-align: center;
 }
