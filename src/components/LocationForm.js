@@ -2,15 +2,13 @@ import React, { useContext } from 'react';
 import { WeatherForecastContext } from '../context/WeatherForecastContext';
 import validateLocationFormValues from '../helpers/validateLocationFormValues';
 import useLocationForm from '../hooks/useLocationForm';
-import { getLocation } from '../helpers/geolocation';
+import { getLocation } from '../api/geolocationApi';
 import './LocationForm.css';
 
 const LocationForm = () => {
     const submitForm = async () => {
-        debugger;
-        console.log('Form submitted sucessfully.');
         await getWeatherForecastForLocation(values.latitude, values.longitude);
-    }
+    };
 
     const getCurrentLocation = () => {
         getLocation(handleLocationFromGeolocationApi);

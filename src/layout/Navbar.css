@@ -31,10 +31,8 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     column-gap: 10px;
-    justify-content: end;
     list-style: none;
     text-align: center;
-    width: 70%;
 }
 
 .header__navbar-menu-item {

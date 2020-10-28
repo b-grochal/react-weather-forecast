@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { getLocationWeatherForecastFromWebApi, getCityWeatherForecastFromWebApi } from '../api/openWeatherMapApi';
 
 export const WeatherForecastContext = React.createContext();
@@ -27,7 +26,6 @@ export const WeatherForecastProvider = ({children}) => {
 
     const getWeatherForecastForCity = async (cityName) => {
         try { 
-            debugger;
             setError(false);
             setIsLoading(true);
             const forecast = await getCityWeatherForecastFromWebApi(cityName);
