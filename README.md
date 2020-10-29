@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather Forecast
+> A web application used to check 5-day weather forecast, built with React.js.
 
-## Available Scripts
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Live demo](#live-demo)
+* [Status](#status)
 
-In the project directory, you can run:
+## General info
+Weather Forecast is a web application which lets you check 5-day weather forecast for thousands of cities around the world and any location. Application was built with React.js framework and additional libraries: React Router for routing and Axios for fetching weather forecast data from OpenWeatherMapAPI. Project is based on functional components with hooks. Data fetched from Web API is shared among components through React's Context API. Whole layout was created with vanilla CSS to boost styling skills. Componets’ logic was implemented in JavaScript. Project was created for learning purposes to get more familiar with React.js framework.
 
-### `npm start`
+## Screenshots
+![Home page](./readme_assets/screen_1.png)
+![City forecast page](./readme_assets/screen_2.png)
+![Location forecast page](./readme_assets/screen_3.png)
+![About page](./readme_assets/screen_4.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
+* React.js 16.13.1
+* React Router 5.2.0
+* Axios 0.20.0
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Setup
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-### `npm test`
+Installation:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install`  
 
-### `npm run build`
+To Start Server:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm start`  
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To Visit App:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`localhost:3000`  
 
-### `npm run eject`
+## Features
+* Get 5-day weather forecast for city by entering city name
+* Get 5-day weather forecast for location by entering latitude and logitude
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Live demo
+Check the live demo of application by clicking on the link: [Weather Forecast Live Demo](https://gracious-dijkstra-07b885.netlify.app/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Status
+Project is _finished_ at this moment but there are possible updates and improvements in the future.
